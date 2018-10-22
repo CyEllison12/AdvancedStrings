@@ -1,8 +1,8 @@
-package model;
+package chat.model;
 import java.util.ArrayList; 
 
 
-public class ChatBot
+public class Chatbot
 {
 	private ArrayList<String> responseList;
 	private ArrayList<String> spookyList;
@@ -11,7 +11,7 @@ public class ChatBot
 	private String joke;
 	private String currentuser;
 	
-	public ChatBot()
+	public Chatbot()
 	{
 		this.joke = "Whats a pirates favorite letter?";
 		this.content = new String("boring content");
