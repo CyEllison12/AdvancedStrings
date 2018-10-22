@@ -31,6 +31,27 @@ public class Chatbot
 		responseList.add("I don't understand...");
 		responseList.add("Thats pretty funny!");
 		responseList.add("You already said that!");
+		responseList.add("Don't say that!");
+		responseList.add("I think you are cool");
+		responseList.add("Very Funny!");
+		responseList.add("Your welcome!");
+		responseList.add("Thanks!");
+		responseList.add("What do you call yourself?");
+		responseList.add("Are you my friend?");
+		responseList.add("Very Scary!");
+		responseList.add("Nice try!");
+		responseList.add("You say that too much!");
+		
+		spookyList.add("BOO!");
+		spookyList.add("Trick or Treat!");
+		spookyList.add("I pick trick!");
+		}
+	
+	public String processText(String userText)
+	{
+		String answer = "";
+		answer += "You said: " + userText;
+		return answer;
 	}
 	
 
