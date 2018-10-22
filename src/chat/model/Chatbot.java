@@ -9,13 +9,13 @@ public class Chatbot
 	
 	private String content;
 	private String joke;
-	private String currentuser;
+	private String currentUser;
 	
 	public Chatbot()
 	{
 		this.joke = "Whats a pirates favorite letter?";
 		this.content = new String("boring content");
-		this.currentuser = new String("This is default user");
+		this.currentUser = new String("This is default user");
 		
 		this.responseList = new ArrayList<String>();
 		this.spookyList = new ArrayList<String>();
@@ -47,11 +47,60 @@ public class Chatbot
 		spookyList.add("I pick trick!");
 		}
 	
+	public Chatbot(String content)
+	{
+		
+	}
+	//----------------------------
 	public String processText(String userText)
 	{
-		String answer = "";
-		answer += "You said: " + userText;
-		return answer;
+		String answer = "";//Declares answer variable
+		answer += "You said: " + userText;//Adds this text to answer
+		return answer;//What will show up when method is called
+	}
+	//______________________________________________
+	public ArrayList<String> getResponseList()
+	{
+		return responseList;
+	}
+	public ArrayList<String> getSpookyList()
+	{
+		return spookyList;
+	}
+	//---------------------------
+	public String getContent()
+	{
+		return content;
+	}
+	//-----------------------------
+	public String getCurrentUser()
+	{
+		return currentUser;
+	}
+	//-------------------------
+	public String getJoke()
+	{
+		return joke;
+	}
+	//_______________________________________
+	public void setResponseList(ArrayList<String> responseList)
+	{
+		this.responseList = responseList;
+	}
+	//--------------------------------
+	public void setContent(String content)
+	{
+		this.content = content;
+	}
+	//--------------------------------
+	public void setCurrentUser(String currentUser)
+	{
+		this.currentUser = currentUser;
+	}
+	//--------------------------------
+	public void setJoke(String joke)
+	{
+		this.joke = joke;
 	}
 	
 

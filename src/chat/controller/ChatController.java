@@ -19,7 +19,7 @@ public class ChatController
 	public String interactWithChatbot(String text)
 	{
 		String output= "";
-		String userResponse = JOptionPane.showInputDialog(null, "WHY");
+		String userResponse = JOptionPane.showInputDialog(null, "Why hello!");
 		output = simplebot.processText(userResponse);
 		return output = "";
 	}
