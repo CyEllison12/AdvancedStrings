@@ -11,6 +11,7 @@ public class ChatController
 	{
 		simplebot = new Chatbot();
 	}
+	
 	public Chatbot getChatbot()
 	{
 		return simplebot;
@@ -44,5 +45,7 @@ public class ChatController
 		answer += "You said: " + userText;
 		return answer;
 	}
+	
+
 
 }

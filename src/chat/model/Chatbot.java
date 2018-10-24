@@ -11,6 +11,8 @@ public class Chatbot
 	private String joke;
 	private String currentUser;
 	
+	
+	
 	public Chatbot()
 	{
 		this.joke = "Whats a pirates favorite letter?";
@@ -101,6 +103,26 @@ public class Chatbot
 	public void setJoke(String joke)
 	{
 		this.joke = joke;
+	}
+	//---------------------------------
+	public boolean legitimacyChecker(String input)
+	{
+		boolean isValid = true;
+		
+		if(input == null)
+		{
+			isValid = false;
+		}
+		else if (input.length() < 2)
+		{
+			isValid = false;
+		}
+		else if(input.contains("sdf") || input.contains("jkl") || input.contains("cvb"))
+		{
+			isValid = false;
+		}
+		
+		return isValid;
 	}
 	
 
