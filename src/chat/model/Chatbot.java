@@ -44,9 +44,16 @@ public class Chatbot
 		responseList.add("Nice try!");
 		responseList.add("You say that too much!");
 		
-		spookyList.add("BOO!");
+		spookyList.add("Halloween!");
 		spookyList.add("Trick or Treat!");
-		spookyList.add("I pick trick!");
+		spookyList.add("Awesome costume!");
+		spookyList.add("Spooky skeletons");
+		spookyList.add("The spookiest thing here are your jokes!");
+		spookyList.add("BOOOO!");
+		spookyList.add("YOUR FACE!");
+		spookyList.add("Very spooky!");
+		spookyList.add("THIS IS HALLOWEEN!");
+		
 		}
 	
 	public Chatbot(String content)
@@ -56,8 +63,8 @@ public class Chatbot
 	//----------------------------
 	public String processText(String userText)
 	{
-		String answer = "";//Declares answer variable
-		answer += "You said: " + userText;//Adds this text to answer
+		String answer = "You said: ";//Declares answer variable
+		answer += "Chatbot says: " + userText;//Adds this text to answer
 		return answer;//What will show up when method is called
 	}
 	//______________________________________________
@@ -124,6 +131,34 @@ public class Chatbot
 		
 		return isValid;
 	}
+	//----------------------------------
+	public boolean spookyChecker(String input)
+	{
+		boolean isValid = true;
+		if(input.contains("Easter"))
+		{
+			isValid = false;
+		}
+		else if (input.contains("Halloween"))
+		{
+			isValid = true;
+		}
+		return isValid;
+	}
+	//-------------------------------------COME BACK TO THIS-----------------------------
+	//public boolean contentChecker(String input)
+	//{
+	//	
+	//}
+	
+	//-------------------------------------------
+	
+	
+	
+	
+	
+	
+	
 	
 
 }

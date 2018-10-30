@@ -21,8 +21,8 @@ public class ChatController
 	{
 		String output= "";
 		String userResponse = JOptionPane.showInputDialog(null, "Why hello!");
-		output = simplebot.processText(userResponse);
-		return output = "";
+		output = simplebot.processText("Chatbot says: "+userResponse);
+		return output;
 	}
 	
 	public void start() 
