@@ -39,12 +39,7 @@ public class ChatController
 		
 	}
 	
-	public String processText(String userText)
-	{
-		String answer = "";
-		answer += "You said: " + userText;
-		return answer;
-	}
+
 	
 
 
