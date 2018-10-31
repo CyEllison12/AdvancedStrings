@@ -44,7 +44,7 @@ public class Chatbot
 		responseList.add("Nice try!");
 		responseList.add("You say that too much!");
 		
-		spookyList.add("Halloween!");
+		spookyList.add("Happy Halloween!");
 		spookyList.add("Trick or Treat!");
 		spookyList.add("Awesome costume!");
 		spookyList.add("Spooky skeletons");
@@ -52,7 +52,7 @@ public class Chatbot
 		spookyList.add("BOOOO!");
 		spookyList.add("YOUR FACE!");
 		spookyList.add("Very spooky!");
-		spookyList.add("THIS IS HALLOWEEN!");
+		spookyList.add("IM JACK... THE PUMPKIN KING!");
 		
 		}
 	
@@ -135,15 +135,25 @@ public class Chatbot
 	public boolean spookyChecker(String input)
 	{
 		boolean isValid = true;
-		if(input.contains("Easter"))
+		
+		for(String spookyString: spookyList)
 		{
-			isValid = false;
-		}
-		else if (input.contains("Halloween"))
+			if (input.contains(spookyString))
+			{
+				isValid = true;
+			}
+			if(input.contains("Easter"))
+			{
+				isValid = false;
+			}
+		/*if (input.contains("Halloween"))
 		{
 			isValid = true;
+		}*/
 		}
+		
 		return isValid;
+		
 	}
 	//-------------------------------------COME BACK TO THIS-----------------------------
 	//public boolean contentChecker(String input)
