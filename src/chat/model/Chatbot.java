@@ -16,7 +16,7 @@ public class Chatbot
 	public Chatbot()
 	{
 		this.joke = "Whats a pirates favorite letter?";
-		this.content = new String("boring content");
+		this.content = new String("Pizza");
 		this.currentUser = new String("This is default user");
 		
 		this.responseList = new ArrayList<String>();
@@ -56,10 +56,6 @@ public class Chatbot
 		
 		}
 	
-	public Chatbot(String content)
-	{
-		
-	}
 	//----------------------------
 	public String processText(String userText)
 	{
@@ -146,10 +142,7 @@ public class Chatbot
 			{
 				isValid = false;
 			}
-		/*if (input.contains("Halloween"))
-		{
-			isValid = true;
-		}*/
+
 		}
 		
 		return isValid;
@@ -159,18 +152,17 @@ public class Chatbot
 	public boolean contentChecker(String input)
 	{
 		boolean isValid = false;
+	
+			if()
 		
-		for(String contentString: responseList)
-		{
-			if(input.contains(contentString))
-			{
-				isValid = true;
-			}
-		}
 		return isValid;
 	}
 	
 	//-------------------------------------------
+	public Chatbot(String string)
+	{
+		content = "sample content";
+	}
 	
 	
 	
