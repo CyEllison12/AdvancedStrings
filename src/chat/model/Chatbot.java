@@ -59,9 +59,28 @@ public class Chatbot
 	//----------------------------
 	public String processText(String userText)
 	{
-		String answer = "You said: ";//Declares answer variable
+		/**String answer = "You said: ";//Declares answer variable
 		answer += "Chatbot says: " + userText;//Adds this text to answer
-		return answer;//What will show up when method is called
+		return answer;//What will show up when method is called*/
+		
+		String answer = "";
+		
+		if(!legitimacyChecker(userText))
+		{
+			answer += "You really should not send null\n";
+		}
+		else
+		{
+			answer += "\nYou said: " + userText + "\n";
+			
+			if (contentChecker(userText))
+			{
+				answer += "You said the special words\n";
+			}
+			int randomIndex = (int) (responseList.size() * Math.random());
+			answer += "Chatboy says: " + responseList.get(randomIndex) + "\r";
+		}
+		return answer;
 	}
 	//______________________________________________
 	public ArrayList<String> getResponseList()

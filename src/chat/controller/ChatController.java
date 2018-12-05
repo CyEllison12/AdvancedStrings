@@ -1,48 +1,58 @@
 package chat.controller;
+
+import chat.view.ChatFrame;
+//import model.ArrayList;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import chat.model.Chatbot;
-import chat.view.ChatFrame;
 
+//_______________________________________________________
 public class ChatController
 {
 	private Chatbot simplebot;
 	private ChatFrame appFrame;
-	
+	//_________________________________________________________
 	public ChatController()
 	{
 		simplebot = new Chatbot();
 		appFrame = new ChatFrame(this);
 	}
-	
+	//---------------------------------------------
 	public Chatbot getChatbot()
 	{
 		return simplebot;
 	}
-	
-	public String interactWithChatbot(String text)
+	//---------------------------------------------
+	public void start()
 	{
-		String output= "";
-		String userResponse = JOptionPane.showInputDialog(null, "Why hello!");
-		output = simplebot.processText("Chatbot says: "+userResponse);
+		/*String userResponse = JOptionPane.showInputDialog(null, "Why hello there");
+		useChatbotCheckers(userResponse);
+		JOptionPane.showMessageDialog(null, interactWithChatbot(userResponse));
+		String continueInput = JOptionPane.showInputDialog(null, "Type 'Yes' to run the program again");
+		String userInput = JOptionPane.showInputDialog(null, "q to quit");
+		{
+			useChatbotCheckers(userInput);
+		}*/
+	}
+	//__________________________________________________
+	public String interactWithChatbot(String userInput)
+	{
+		/**String output = "You said: " + userInput + "Chatbot says: " + simplebot.processText(userInput);
+		return output;*/
+		
+		String output = "";
+		output += simplebot.processText(userInput);
 		return output;
 	}
-	
-	public void start() 
+	//____________________________________________
+	public String useChatbotCheckers(String input)
 	{
-
-	String userInput = "";
-		while(!userInput.equalsIgnoreCase("quit"))
+		String output = "";
+		if (simplebot.spookyChecker(input))//Use the object simplebot, not the class Chatbot
 		{
-			userInput =JOptionPane.showInputDialog(null, "THIS IS A TEST");
-			JOptionPane.showMessageDialog(null, userInput);
+			output = "You said a spooky word. Halloween";
 		}
 		
-
-		
+		return output;
 	}
-	
-
-	
-
-
 }
