@@ -30,12 +30,12 @@ public class ChatController
 	public void start() 
 	{
 
-/**		String userInput = "";
+	String userInput = "";
 		while(!userInput.equalsIgnoreCase("quit"))
 		{
 			userInput =JOptionPane.showInputDialog(null, "THIS IS A TEST");
 			JOptionPane.showMessageDialog(null, userInput);
-		}*/
+		}
 		
 
 		

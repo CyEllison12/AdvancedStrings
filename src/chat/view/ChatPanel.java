@@ -19,6 +19,13 @@ public class ChatPanel extends JFrame
 	{
 		super();
 		
+		this.appController = new ChatController();
+		this.appLayout = new SpringLayout();
+		this.chatButton = new JButton("This is a button");
+		this.inputField = new JTextField();
+		this.chatArea = new JTextArea();
+		this.chatPane = new JScrollPane();
+		
 		setupPanel();
 		setupLayout();
 		setupListeners();
