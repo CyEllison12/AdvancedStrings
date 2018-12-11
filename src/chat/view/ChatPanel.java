@@ -110,7 +110,7 @@ public class ChatPanel extends JPanel
 				{
 			public void actionPerformed(ActionEvent click)
 			{
-				chatArea.setText("");
+				chatArea.setText("Text reset! \nRIP chatbot");
 			}
 				});
 		

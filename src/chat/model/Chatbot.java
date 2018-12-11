@@ -67,7 +67,7 @@ public class Chatbot
 		
 		if(!legitimacyChecker(userText))
 		{
-			answer += "You really should not send null\n";
+			answer += "\nYou really should not send null";
 		}
 		else
 		{
