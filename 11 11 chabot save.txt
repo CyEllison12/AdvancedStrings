@@ -1,0 +1,15 @@
+Chat Area
+You said: Talk to bot here
+Chatboy says: Don't say that!
+You said: Why
+Chatboy says: Don't say that!
+You said: WHY NOT
+Chatboy says: What do you call yourself?
+You said: Cy
+Chatboy says: I don't understand...
+You said: Me Neither
+Chatboy says: What do you call yourself?
+You really should not send null
+You really should not send null
+You said: Ian
+Chatboy says: I don't understand...

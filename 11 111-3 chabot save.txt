@@ -1,0 +1,5 @@
+Chat Area
+You said: Talk to bot here
+Chatboy says: Very Funny!
+You said: Yes i am
+Chatboy says: Nice try!
