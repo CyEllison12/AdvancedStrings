@@ -22,7 +22,7 @@ public class ChatFrame extends JFrame
 	{
 		this.setContentPane(appPanel);
 		this.setTitle("ChatBot");
-		this.setSize(800, 600);
+		this.setSize(1024, 768);
 		this.setResizable(false);
 		this.setVisible(true);
 	}
