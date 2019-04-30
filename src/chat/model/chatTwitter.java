@@ -16,14 +16,14 @@ public class chatTwitter
 	{
 		this.app = app;
 		this.chatTwitter = TwitterFactory.getSingleton();
-		this.tweetEnd = " @CodyHenrichsen, @CSCheerleader, @CTECNow, @ChatbotCTEC";
+		this.tweetEnd = " @CodyHenrichsen, @ChatbotCTEC";
 	}
 
 	public void sendTweet(String tweetText)
 	{
 		try
 		{
-			chatTwitter.updateStatus(tweetText + tweetEnd);
+			chatTwitter.updateStatus(tweetText);
 		}
 		catch(TwitterException twitterError)
 		{
