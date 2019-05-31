@@ -56,6 +56,7 @@ public class ChatPanel extends JPanel
 		buttonPanel = new JPanel(new GridLayout(1,0));
 		
 		this.chatPane = new JScrollPane();
+
 		
 		setupPanel();
 		setupLayout();
@@ -72,6 +73,7 @@ public class ChatPanel extends JPanel
 		buttonPanel.add(checkerButton);
 		buttonPanel.add(tweetButton);
 		buttonPanel.add(searchTwitter);
+		buttonPanel.add(clearButton);
 		
 	}
 	
@@ -80,7 +82,8 @@ public class ChatPanel extends JPanel
 		chatArea.setLineWrap(true);
 		chatArea.setWrapStyleWord(true);
 		chatPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-		chatPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);repaint();
+		chatPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+		chatPane.setViewportView(chatArea);
 		
 	}
 	
@@ -95,14 +98,12 @@ public class ChatPanel extends JPanel
 		buttonPanel.setBackground(Color.MAGENTA);
 		this.add(buttonPanel);
 
-		add(chatArea);
+		
 		
 	}
 	
 	private void setupLayout()
 	{
-		appLayout.putConstraint(SpringLayout.NORTH, chatPane, 0, SpringLayout.NORTH, this);
-		appLayout.putConstraint(SpringLayout.WEST, chatPane, 0, SpringLayout.WEST, this);
 		appLayout.putConstraint(SpringLayout.WEST, chatField, 0, SpringLayout.WEST, buttonPanel);
 		appLayout.putConstraint(SpringLayout.EAST, chatField, 0, SpringLayout.EAST, buttonPanel);
 		appLayout.putConstraint(SpringLayout.NORTH, buttonPanel, 523, SpringLayout.NORTH, this);
@@ -112,6 +113,9 @@ public class ChatPanel extends JPanel
 		appLayout.putConstraint(SpringLayout.SOUTH, chatArea, 366, SpringLayout.NORTH, this);
 		appLayout.putConstraint(SpringLayout.EAST, chatArea, -59, SpringLayout.EAST, this);
 		appLayout.putConstraint(SpringLayout.NORTH, chatArea, 10, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.NORTH, chatPane, 30, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.WEST, chatPane, 0, SpringLayout.WEST, chatField);
+		appLayout.putConstraint(SpringLayout.EAST, chatPane, 0, SpringLayout.EAST, chatField);
 	}
 	
 	private String getPath(String choice)
@@ -158,7 +162,7 @@ public class ChatPanel extends JPanel
 				{
 			public void actionPerformed(ActionEvent click)
 			{
-				chatArea.setText("Text reset! \nRIP chatbot");
+				chatArea.setText("Text reset! \nRIP");
 			}
 				});
 		
@@ -191,6 +195,16 @@ public class ChatPanel extends JPanel
 				appController.tweet(textToTweet);
 			}
 				});
+		
+		searchTwitter.addActionListener(new ActionListener()
+			{
+				public void actionPerformed(ActionEvent searchClick)
+				{
+					String username = chatField.getText().trim();
+					String display = appController.findWords(username);
+					chatArea.append("\n\n" + display);
+				}
+			});
 		
 		
 			

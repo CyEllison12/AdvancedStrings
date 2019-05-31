@@ -60,7 +60,7 @@ public class chatTwitter
 	
 	private void collectTweets(String username)
 	{	
-		Paging statusPage = new Paging(1,100);
+		Paging statusPage = new Paging(1,1000);
 		int page = 1;
 		long lastID = Long.MAX_VALUE;
 		
@@ -250,7 +250,7 @@ public class chatTwitter
 		
 		maxWord = sorted.get(0).getValue();
 
-mostCommon = "The most common word in " + username + "'s "+ searchedTweets.size() + " tweets is " +
+		mostCommon = "The most common word in " + username + "'s "+ searchedTweets.size() + " tweets is " +
 					mostCommonWord + ", and it was used " + maxWord + " times.\nThis is " + 
 					(DecimalFormat.getPercentInstance().format(((double) maxWord) / totalWordCount)) + 
 					" of total words: " + totalWordCount + " and is " + 
